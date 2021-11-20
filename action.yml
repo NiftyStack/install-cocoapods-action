@@ -1,6 +1,9 @@
-name: 'Cocoapods'
+name: 'install_cocoapods'
 description: 'Install or cache cocoapods'
-
+branding:
+  icon: 'arrow-up-circle'
+  color: 'green'
+  
 # TODO: Specify version
 
 runs:
