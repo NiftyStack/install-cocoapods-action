@@ -1,20 +1,21 @@
-name: 'Cocoapods'
+name: 'install-cocoapods-action'
 description: 'Install or cache cocoapods'
-#inputs:
-#  version:
-#    description: 'version of cocoapods'
-#    required: false
-#    default: 'latest'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'green'
+
+# TODO: Specify version
+
 runs:
   using: "composite"
   steps:
     - name: Cache pod lib
-        id: cache-pod-lib
-        uses: actions/cache@v2
-        with:
-          path: |
-            /usr/local/bin/pod
-          key: ${{ runner.os }}-pod-lib-v1
+      id: cache-pod-lib
+      uses: actions/cache@v2
+      with:
+        path: |
+          /usr/local/bin/pod
+        key: ${{ runner.os }}-pod-lib-v1
 
     - name: Install cocoapods
       if: steps.cache-pod-lib.outputs.cache-hit != 'true'
@@ -22,3 +23,4 @@ runs:
         export GEM_HOME=$HOME/.gem
         export PATH=$GEM_HOME/bin:$PATH
         gem install -n /usr/local/bin cocoapods
+      shell: bash
