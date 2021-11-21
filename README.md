@@ -1,5 +1,6 @@
-# Cocoapods
+# install_cocoapods
 
+Handles cocoapods installation and caching.
 
 Example:
 
