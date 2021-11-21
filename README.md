@@ -1,4 +1,4 @@
-# install_cocoapods
+# cocoapods-action
 
 Handles cocoapods installation and caching.
 
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: NiftyStack/install_cocoapods@1.0.0
+      - uses: NiftyStack/cocoapods-action@1.0.0
 
       - run: pod install
 ``` 
