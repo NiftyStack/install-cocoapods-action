@@ -1,4 +1,4 @@
-name: 'install_cocoapods'
+name: 'cocoapods-action'
 description: 'Install or cache cocoapods'
 branding:
   icon: 'arrow-up-circle'
